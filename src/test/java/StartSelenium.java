@@ -22,6 +22,8 @@ public class StartSelenium {
 
     @Test
     public void testName(){
+
+        wd.findElement(By.cssSelector("a"));
         WebElement element = wd.findElement(By.tagName("a"));
         List<WebElement> elements = wd.findElements(By.tagName("a"));
         System.out.println("a : = " + elements.size());
@@ -53,6 +55,7 @@ public class StartSelenium {
         System.out.println("//////////////////////////////////////////////");
 
         wd.findElement(By.id("root"));
+        wd.findElement(By.cssSelector("#root"));
         List<WebElement> r = wd.findElements(By.id("root"));
         System.out.println("root : = " + r.size());
 
@@ -85,6 +88,12 @@ public class StartSelenium {
         System.out.println("ABOUT : = " + ab.size());
 
         wd.findElement(By.linkText("LOGIN"));
+        wd.findElement(By.cssSelector("[href]"));
+        wd.findElement(By.cssSelector("[href='/login']"));
+        wd.findElement(By.cssSelector("[href ^='/lo']"));//start
+        wd.findElement(By.cssSelector("[href $='/in']"));//end
+        wd.findElement(By.cssSelector("[href *='/ogi']"));//contains
+
         List<WebElement> log  = wd.findElements(By.linkText("LOGIN"));
         System.out.println("LOGIN : = " + log.size());
 
