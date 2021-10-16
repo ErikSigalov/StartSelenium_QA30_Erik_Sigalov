@@ -23,38 +23,38 @@ public class StartSelenium {
     @Test
     public void testName(){
 
-        wd.findElement(By.cssSelector("a"));
-        WebElement element = wd.findElement(By.tagName("a"));
+        //wd.findElement(By.cssSelector("a"));
+        WebElement element = wd.findElement(By.cssSelector("a"));
         List<WebElement> elements = wd.findElements(By.tagName("a"));
         System.out.println("a : = " + elements.size());
 
-        wd.findElement(By.tagName("div"));
+        wd.findElement(By.cssSelector("div"));
         List<WebElement> d = wd.findElements(By.tagName("div"));
         System.out.println("div : = " + d.size());
 
-        wd.findElement(By.tagName("h1"));
+        wd.findElement(By.cssSelector("h1"));
         List<WebElement> h = wd.findElements(By.tagName("h1"));
         System.out.println("h1 : = " + h.size());
 
-        wd.findElement(By.tagName("input"));
+        wd.findElement(By.cssSelector("input"));
         List<WebElement> i = wd.findElements(By.tagName("input"));
         System.out.println("input : = " + i.size());
 
-        wd.findElement(By.tagName("br"));
+        wd.findElement(By.cssSelector("br"));
         List<WebElement> b = wd.findElements(By.tagName("br"));
         System.out.println("br : = " + b.size());
 
-        wd.findElement(By.tagName("button"));
+        wd.findElement(By.cssSelector("button"));
         List<WebElement> but = wd.findElements(By.tagName("button"));
         System.out.println("button : = " + but.size());
 
-        wd.findElement(By.tagName("script"));
+        wd.findElement(By.cssSelector("script"));
         List<WebElement> s = wd.findElements(By.tagName("script"));
         System.out.println("script : = " + s.size());
 
         System.out.println("//////////////////////////////////////////////");
 
-        wd.findElement(By.id("root"));
+        //wd.findElement(By.id("root"));
         wd.findElement(By.cssSelector("#root"));
         List<WebElement> r = wd.findElements(By.id("root"));
         System.out.println("root : = " + r.size());
@@ -87,12 +87,12 @@ public class StartSelenium {
         List<WebElement> ab  = wd.findElements(By.linkText("ABOUT"));
         System.out.println("ABOUT : = " + ab.size());
 
-        wd.findElement(By.linkText("LOGIN"));
-        wd.findElement(By.cssSelector("[href]"));
-        wd.findElement(By.cssSelector("[href='/login']"));
-        wd.findElement(By.cssSelector("[href ^='/lo']"));//start
-        wd.findElement(By.cssSelector("[href $='/in']"));//end
-        wd.findElement(By.cssSelector("[href *='/ogi']"));//contains
+        //wd.findElement(By.cssSelector("LOGIN"));
+        //wd.findElement(By.cssSelector("[href]"));
+        //wd.findElement(By.cssSelector("[href='/login']"));
+        //wd.findElement(By.cssSelector("[href ^='/lo']"));//start
+        //wd.findElement(By.cssSelector("[href $='/in']"));//end
+        //wd.findElement(By.cssSelector("[href *='/ogi']"));//contains
 
         List<WebElement> log  = wd.findElements(By.linkText("LOGIN"));
         System.out.println("LOGIN : = " + log.size());
